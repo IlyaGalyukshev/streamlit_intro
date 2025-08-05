@@ -4,8 +4,6 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="Text Analyzer", layout="wide")
-
 st.title("📝 Interactive Text Analyzer")
 st.write(
     "Paste or type any text below and click **Analyze** to see quick statistics and the most common words."

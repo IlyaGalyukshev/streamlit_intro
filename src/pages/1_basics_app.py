@@ -1,10 +1,9 @@
 import time
+
+import altair as alt
 import numpy as np
 import pandas as pd
-import altair as alt
 import streamlit as st
-
-st.set_page_config(page_title="Streamlit Basics Workshop", layout="centered")
 
 st.title("👋 Welcome to Streamlit Basics")
 st.write(
@@ -25,7 +24,7 @@ if st.button("Press me"):
     )
 
 number = st.slider("Pick a number", 0, 100, 42)
-st.write(f"You selected **{number}**, its square is **{number ** 2}**.")
+st.write(f"You selected **{number}**, its square is **{number**2}**.")
 
 
 st.header("Layout: columns")
@@ -36,7 +35,7 @@ with col2:
     progress_placeholder = st.empty()
     for i in range(101):
         progress_placeholder.progress(i)
-        time.sleep(0.005)
+        time.sleep(0.01)
 
 
 st.header("Charts")

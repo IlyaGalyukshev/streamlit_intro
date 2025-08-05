@@ -1,0 +1,16 @@
+[project]
+name = "streamlit-intro"
+version = "0.0.1"
+description = "Basic streamlit intro for harbour space course."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=2.3.1",
+    "plotly>=6.2.0",
+    "requests>=2.32.4",
+    "streamlit>=1.47.1",
+    "python-dotenv",
+    "openai",
+    "altair",
+    "dotenv>=0.9.9",
+]

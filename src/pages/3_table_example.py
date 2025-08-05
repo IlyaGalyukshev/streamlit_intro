@@ -2,8 +2,6 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="CSV Explorer", layout="wide")
-
 st.title("📊 CSV Explorer")
 st.write("Upload a CSV file to explore its contents interactively.")
 

@@ -1,16 +1,17 @@
+import hashlib
+import hmac
+import json
 import os
-from typing import List, Dict, Tuple
-from decimal import Decimal, ROUND_DOWN, InvalidOperation
+import time
+from decimal import ROUND_DOWN, Decimal, InvalidOperation
+from typing import Dict, List, Tuple
 
 import altair as alt
 import pandas as pd
 import requests
 import streamlit as st
-import time, hmac, hashlib, json
 from dotenv import load_dotenv
 
-
-st.set_page_config(page_title="LLM Trade Advisor — BTC/USDT (Spot)", layout="wide")
 load_dotenv()
 
 st.title("🤖📈 LLM Trade Advisor — BTC/USDT (Spot)")
