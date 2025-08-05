@@ -2,5 +2,6 @@ streamlit>=1.34
 pandas
 altair
 requests 
-openai 
+openai==0.28
 python-dotenv 
+yfinance
