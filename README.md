@@ -9,7 +9,6 @@ Welcome to **Streamlit Intro** – a hands-on set of mini-projects that showcase
 | 3. CSV Explorer | Interactive tabular data exploration and descriptive statistics | `apps/03_table_example.py` |
 | 4. Crypto Dashboard | API calls, caching, session-state, and responsive layouts | `apps/04_advanced_demo.py` |
 | 5. LLM Trade Advisor | Integrating OpenAI + Bybit REST APIs to create a trading assistant | `apps/05_llm_trade_advisor.py` |
-| 6. AI Micro-cap Auto-Trader | A research prototype for autonomous portfolio re-balancing | `apps/06_autotrader.py` |
 
 ---
 
@@ -56,10 +55,9 @@ The **LLM Trade Advisor** and **Auto-Trader** need a few secrets to be able to t
 
 ```bash
 # .env example
-OPENAI_API_KEY="sk-..."            # Needed for apps/05 & apps/06
+OPENAI_API_KEY="sk-..."            # Needed for apps/05 
 BYBIT_API_KEY="..."                # Needed for app/05 if you want to PLACE orders
-BYBIT_API_SECRET="..."             # "
-BYBIT_ACCOUNT_TYPE="UNIFIED"       # (optional) defaults to UNIFIED
+BYBIT_API_SECRET="..."             
 ```
 The apps will automatically load the `.env` file via **python-dotenv**.
 
@@ -86,31 +84,8 @@ The apps will automatically load the `.env` file via **python-dotenv**.
    ```bash
    streamlit run apps/05_llm_trade_advisor.py
    ```
-6. **AI Micro-cap Auto-Trader** (research prototype – _highly experimental_!)
-   ```bash
-   streamlit run apps/06_autotrader.py
-   ```
 
 Because Streamlit hot-reloads on every file save, you can freely tweak the code while the apps are running and instantly see the effect in the browser.
-
----
-
-## 🗃 Data Folder (`ai_microcap_data/`)
-The auto-trader stores its portfolio snapshot, trade log, and performance metrics as CSVs inside this folder so that state is preserved across restarts:
-
-* `portfolio.csv` – current positions
-* `performance.csv` – daily equity curve
-* `trades.csv` / `orders.csv` – execution history
-
-Feel free to delete these files at any moment – they will be recreated on the next run.
-
----
-
-## 🛠 Development Tips
-* Use **`st.cache_data`** / **`st.cache_resource`** to memoise expensive API calls or ML inference.
-* The **command palette** (`⌘ / Ctrl + K`) is a hidden gem for power-users.
-* Turn themes on/off via the settings icon in the top-right corner or programmatically via `st.theme()`.
-* Multipage apps are as simple as dropping extra scripts into a `pages/` folder – Streamlit picks them up automatically.
 
 ---
 
